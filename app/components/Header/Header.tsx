@@ -1,8 +1,20 @@
-import React from "react";
+"use client";
 import Image from "next/image";
 import user from "../../../public/user_pic.png";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  // Initializing the useRouter
+  const router = usePathname();
+
+  // To evaluate the page location
+  const linkClass = (path: string): string => {
+    return router === path
+      ? "text-red-500 " // Active styles
+      : ""; // Default styles
+  };
+
   return (
     <div className="w-full bg-black p-3 rounded flex justify-around items-center">
       <p className="text-white text-2xl font-bold uppercase hover:text-red-700">
@@ -20,11 +32,17 @@ export default function Header() {
         </button>
       </form>
 
-      <ul className="text-gray-400 flex gap-6">
-        <li>Home</li>
-        <li>Movies</li>
-        <li>Series</li>
-      </ul>
+      <nav className="text-gray-400 flex gap-6">
+        <Link href="/" className={linkClass("/")}>
+          Home
+        </Link>
+        <Link href="/movies" className={linkClass("/movies")}>
+          Movies
+        </Link>
+        <Link href="/series" className={linkClass("/series")}>
+          Series
+        </Link>
+      </nav>
       <Image
         src={user}
         width={100}
