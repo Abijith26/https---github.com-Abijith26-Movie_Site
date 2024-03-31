@@ -16,7 +16,7 @@ export default function Header() {
   };
 
   return (
-    <div className="w-full bg-black p-3 rounded flex justify-around items-center">
+    <div className="w-full bg-gray-800 p-3 rounded flex justify-around items-center">
       <p className="text-white text-2xl font-bold uppercase hover:text-red-700">
         films
       </p>

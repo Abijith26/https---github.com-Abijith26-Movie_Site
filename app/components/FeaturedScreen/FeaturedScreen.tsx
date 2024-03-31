@@ -9,13 +9,14 @@ import Slider from "react-slick";
 const settings = {
   dots: true,
   infinite: true,
-  speed: 1000,
+  speed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
   autoplay: true,
-  autoplaySpeed: 400,
+  autoplaySpeed: 3000,
   cssEase: "linear",
+  pauseOnHover: true,
 };
 
 export default function FeaturedScreen() {
