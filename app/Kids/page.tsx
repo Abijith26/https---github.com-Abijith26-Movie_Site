@@ -1,10 +1,10 @@
 import Header from "../components/Header/Header";
 
-export default function Series() {
+export default function Kids() {
   return (
     <div>
       <Header />
-      <p>Series</p>
+      <p>Kids</p>
     </div>
   );
 }

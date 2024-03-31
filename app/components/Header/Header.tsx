@@ -39,8 +39,8 @@ export default function Header() {
         <Link href="/movies" className={linkClass("/movies")}>
           Movies
         </Link>
-        <Link href="/series" className={linkClass("/series")}>
-          Series
+        <Link href="/series" className={linkClass("/Kids")}>
+          Kids
         </Link>
       </nav>
       <Image
